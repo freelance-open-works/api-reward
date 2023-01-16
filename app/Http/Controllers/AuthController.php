@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Hash;
 use Laravel\Passport\Passport;
+
 class AuthController extends Controller
 {
     /*
@@ -16,13 +17,13 @@ class AuthController extends Controller
     */
 
     public function login(Request $request)
-    { 
+    {
         /*
             Fungsi: untuk login admin.
             Input:
                 - username      -> String
                 - password `    -> string
-            Output: 
+            Output:
                 - message       -> String -> Pesan pemanggilan API
                 - user          -> Object -> Data admin yang login
                 - token_type    -> String -> Jenis token untuk header pemanggilan API
@@ -35,12 +36,14 @@ class AuthController extends Controller
             'password' => 'required'
         ]); //membuat rule validasi input
 
-        if ($validate->fails())
-            return response(['message' => $validate->errors()], 400); //return error invalid input    
+        if ($validate->fails()) {
+            return response(['message' => $validate->errors()], 400);
+        } //return error invalid input
 
 
-        if (!Auth::attempt($loginData))
-            return response(['message' => 'Invalid Credentials'], 401); //return error gagal login    
+        if (!Auth::attempt($loginData)) {
+            return response(['message' => 'Invalid Credentials'], 401);
+        } //return error gagal login
 
         // Get the currently authenticated user...
         $user = Auth::user();
@@ -49,11 +52,10 @@ class AuthController extends Controller
        
         return response([
             'message' => 'Authenticated',
-            'user' => $user,
+            'user' => $user->load(['role.permissions']),
             'token_type' => 'Bearer',
             'access_token' => $token,
 
         ]); //return data user dan token dalam bentuk json
-
     }
 }

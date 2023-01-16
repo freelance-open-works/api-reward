@@ -23,8 +23,8 @@ Route::post('login', 'AuthController@login');
 Route::get('laporanstok', 'CatalogueExportController@export')->name('drc.export');
 
 Route::group(['middleware' => ['auth:api']], function () {
-    Route::get('review', 'ReviewController@index');
-    Route::post('review', 'ReviewController@store');
+    // Route::get('review', 'ReviewController@index');
+    // Route::post('review', 'ReviewController@store');
 
     //Users
     Route::get('users', 'UserController@index');
@@ -139,7 +139,7 @@ Route::get('v2/info', 'User\LoginController@getamtarewardStatus');
 Route::post('student/login', 'User\LoginController@login');
 
 //Main
-Route::get('student/profile', 'User\MainContrkuloller@getProfile');
+Route::get('student/profile', 'User\MainController@getProfile');
 Route::get('elearning/sync', 'User\MainController@generateSaveLogKuliah');
 Route::get('elearning/syncAll', 'User\MainController@generateSaveLogKuliahAll');
 Route::get('student/refreshPoint', 'User\MainController@refreshPoint');
@@ -186,4 +186,4 @@ Route::post('updateUserSocial', 'User\SocialController@updateUserSocial');
 Route::get('chat/{userId}', 'User\MessageController@getMessageByUserDesc');
 Route::post('chat', 'User\MessageController@store');
 
-
+Route::apiResource('roles', 'RoleController');

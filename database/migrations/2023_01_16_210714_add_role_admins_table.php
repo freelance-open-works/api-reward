@@ -13,7 +13,12 @@ class AddRoleAdminsTable extends Migration
      */
     public function up()
     {
-        //
+        if (!Schema::hasColumn('admins', 'role_id')) {
+            Schema::table('admins', function (Blueprint $table) {
+                $table->bigInteger('role_id')->default(1);
+                $table->bigInteger('is_super')->default(1);
+            });
+        }
     }
 
     /**

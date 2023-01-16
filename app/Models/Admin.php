@@ -19,7 +19,7 @@ class Admin extends Authenticatable
     use HasFactory, Notifiable, HasApiTokens;
     protected $table = 'admins';
     protected $fillable = [
-        'username', 'password'
+        'username', 'password','role'
     ];
 
     /**
@@ -59,5 +59,10 @@ class Admin extends Authenticatable
             Return: Array
         */
         return Admin::select('id')->get()->toArray();
+    }
+
+    public function role()
+    {
+        return $this->hasOne(Role::class, 'id', 'role_id');
     }
 }
