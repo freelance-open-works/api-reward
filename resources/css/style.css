@@ -1,0 +1,168 @@
+html,body{
+	height: 100%;
+    margin: 0;
+    font-family: RobotoRegular;
+}
+
+@font-face {
+    font-family: RobotoRegular;
+    src: url('../fonts/Roboto-Regular.ttf');
+}
+
+body{
+	background-color: #fff;
+}
+
+#main-content {
+	margin: 0;
+}
+
+#nav-top {
+	background-color: #3f51b5;
+	max-height: 75px;
+	height: 75px;
+	line-height: 75px;
+	position: fixed;
+	width: 100%;
+	z-index: 2;
+	border-bottom: solid 2px #428BCA;
+
+}
+
+#nav-top > img {
+	vertical-align: middle;
+	height: 50px;
+	margin-left: 10px;
+	width: auto;
+}
+
+#nav-top > #logout > button {
+	float: right;
+	margin-right: 25px;
+	margin-top: 20px;
+}
+
+#nav-top > #logout > button:hover {
+	border: solid 1px #fff;
+}
+
+#logout {
+	float: right;
+	line-height: 75px;
+}
+
+#logout > button {
+	color: #fff;
+	background-color: #F44336;
+	font-weight: bold;
+	text-decoration: none;
+    vertical-align: middle;
+}
+
+#logout > button > span {
+	margin-right: 10px;
+}
+
+#nav-side {
+	padding-left: 0;
+	padding-right: 0;
+	background-color: #f5f5f5;
+	padding-left: 10px;
+	padding-top: 20px;
+	padding-right: 10px;
+	height: 100%;
+	position: fixed;
+	margin-top: 70px;
+	/*margin-left: 10px;*/
+	min-width: 200px;
+}
+
+#nav-side > ul > li {
+	margin-bottom: 8px; 
+}
+
+#nav-side > ul > li > a {
+	font-size: 0.9em;
+}
+
+#admin-content {
+	height: auto;
+	margin-top: 74px;
+	padding-top: 20px;
+	padding-left: 75px;
+	margin-left: 200px;
+}
+
+#btn-new {
+	margin-bottom: 10px;
+}
+
+.img-table{
+	max-width: 200px;
+	max-height: 200px;
+}
+
+#form-right > .checkbox > .cb-label {
+	margin-bottom: 5px;
+}
+
+.cb-point {
+	margin-top: 10px;
+}
+
+#photo-box, #photo-box > .col-lg-4 {
+	padding-left: 0;
+}
+
+.inputPhoto {
+	margin-top: 10px;
+	max-width: 335px;
+	height: auto;
+}
+
+/*REDEM PAGE*/
+
+#redeem_key {
+	color: #009688;
+	font-size: 20px;
+	margin: 10px auto;
+	text-align: center;
+}
+
+.form-error {
+	color: red;
+	margin-top: 5px;
+	font-size: 12px;
+}
+
+.datepicker {
+	z-index: 9999;
+}
+
+.small-italic {
+	font-style: italic;
+	font-size: 0.9em;
+}
+
+.div-line {
+	height: 1px;
+	background-color: #C3C3C3;
+	width: 100%;
+}
+
+/*datatable tools*/
+
+#redeem_table_wrapper > .clear {
+	height: 40px;
+}
+
+div.DTTT { 
+	margin-bottom: 0.5em; 
+	float: right; 
+	display: block;
+	/*margin-left: 30px;*/
+}
+
+div.dataTables_wrapper { 
+	clear: both; 
+}

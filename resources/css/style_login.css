@@ -1,0 +1,61 @@
+body {
+	background-color: #3f51b5;
+	/*background-color: #fff;*/
+	font-family: RobotoRegular;
+}
+
+@font-face {
+    font-family: RobotoRegular;
+    src: url('../fonts/Roboto-Regular.ttf');
+}
+
+.row {
+	margin-top: 3%;
+}
+
+#main-box {
+/*	padding-top: 5%;*/
+}
+
+#welcome-text-big {
+	font-size: 2em;
+	margin-bottom: 0;
+	line-height: 1em;
+	color: #fff;
+}
+
+#welcome-text-small {
+	font-size: 1.5em;
+	color: #fff;
+}
+
+#btn-login {
+	background-color: #ffeb3b;
+	border: none;
+	width: 100%;
+	color: #3f51b5;
+	font-weight: bold;
+}
+
+#btn-login:hover {
+	background-color: #fff;
+}
+
+#btn-login > a {
+	color: #616161;
+}
+
+#logo {
+	display: block;
+	height: 150px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 30px;
+	margin-bottom: 40px;
+	vertical-align: middle;
+}
+
+#uname {
+	background-color: #fff;
+}
+

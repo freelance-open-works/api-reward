@@ -1,0 +1,62 @@
+html,body{
+	height: 100%;
+    margin: 0;
+}
+
+body{
+	background-image : url(../images/lan_bg.jpg);
+	background-repeat : repeat; 
+}
+
+@font-face {
+    font-family: roboto;
+    src: url('../font/Roboto-Regular.ttf');
+}
+
+.row {
+	margin-right: 0px;
+}
+
+#top-content {
+	height: 50px;
+}
+
+#logo{
+	width: 230px;
+}
+
+#phone {
+	max-width: 270px;
+}
+
+#right-content {
+
+}
+
+#left-content {
+
+}
+
+#title {
+	color: white;
+	font-family: roboto;
+	font-size: 40px;
+	margin-top: 20px;
+}
+
+#jargon {
+	color: white;
+	font-family: roboto;
+	font-size: 16px;
+	margin-top: 10px;
+}
+
+#bt-download {
+	margin-top: 10px;
+}
+
+.bx-wrapper {
+	border: 0;
+	box-shadow: 0 0 0;
+	background: 0;
+}
