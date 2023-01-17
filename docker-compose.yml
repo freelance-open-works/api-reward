@@ -32,6 +32,7 @@ services:
       - 3306:3306
     volumes:
       - ./database:/database
+      - ./data:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: password
     networks:

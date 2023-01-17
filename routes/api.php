@@ -187,3 +187,4 @@ Route::get('chat/{userId}', 'User\MessageController@getMessageByUserDesc');
 Route::post('chat', 'User\MessageController@store');
 
 Route::apiResource('roles', 'RoleController');
+Route::apiResource('user-admins', 'UserAdminController')->parameters(['user-admins' => 'user']);
