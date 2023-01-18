@@ -20,7 +20,7 @@ class UserAdminController extends Controller
     {
         $request->validate([
             'username' => 'required|string|max:255|unique:admins,username',
-            'password' => 'required|confirmed',
+            'password' => 'required|min:8|confirmed',
             'role_id' => 'required|exists:roles,id'
         ]);
 
@@ -44,9 +44,9 @@ class UserAdminController extends Controller
             'role_id' => 'required|exists:roles,id'
         ]);
 
-        if ($request->has('password')) {
+        if ($request->input('password') != '') {
             $request->validate([
-                'password' => 'required|confirmed',
+                'password' => 'required|min:8|confirmed',
             ]);
 
             $user->fill(['password' => bcrypt($request->password)]);
